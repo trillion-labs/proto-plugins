@@ -3,15 +3,19 @@ type = "cli"
 
 [platform.linux]
 download-file = "linux/{arch}/kubectl"
+checksum_file = "linux/{arch}/kubectl.sha256"
 
 [platform.macos]
 download-file = "darwin/{arch}/kubectl"
+checksum_file = "darwin/{arch}/kubectl.sha256"
 
 [platform.windows]
 download-file = "windows/{arch}/kubectl.exe"
+checksum_file = "windows/{arch}/kubectl.sha256"
 
 [install]
 download-url = "https://dl.k8s.io/release/v{version}/bin/{download_file}"
+checksum-url = "https://dl.k8s.io/release/v{version}/bin/{checksum_file}"
 unpack = false
 
 [install.arch]

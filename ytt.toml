@@ -1,0 +1,25 @@
+name = "ytt"
+type = "cli"
+
+[platform.linux]
+download-file = "ytt-linux-{arch}"
+checksum-file = "checksums.txt"
+
+[platform.macos]
+download-file = "ytt-darwin-{arch}"
+checksum-file = "checksums.txt"
+
+[platform.windows]
+download-file = "ytt-windows-{arch}.exe"
+checksum-file = "checksums.txt"
+
+[install]
+download-url = "https://github.com/carvel-dev/ytt/releases/download/v{version}/{download_file}"
+unpack = false
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/carvel-dev/ytt"

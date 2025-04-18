@@ -1,2 +1,3 @@
 # proto-plugins
-Set of moonrepo/proto plugins
+
+Set of [moonrepo/proto](https://moonrepo.dev/proto) plugins

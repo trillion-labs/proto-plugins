@@ -1,0 +1,20 @@
+name = "fd"
+type = "cli"
+
+[platform.linux]
+archive-prefix = "fd-v{version}-{arch}-unknown-linux-gnu"
+download-file = "fd-v{version}-{arch}-unknown-linux-gnu.tar.gz"
+
+[platform.macos]
+archive-prefix = "fd-v{version}-{arch}-apple-darwin"
+download-file = "fd-v{version}-{arch}-apple-darwin.tar.gz"
+
+[platform.windows]
+archive-prefix = "fd-v{version}-{arch}-pc-windows-gnu"
+download-file = "fd-v{version}-{arch}-pc-windows-gnu.zip"
+
+[install]
+download-url = "https://github.com/sharkdp/fd/releases/download/v{version}/{download_file}"
+
+[resolve]
+git-url = "https://github.com/sharkdp/fd"

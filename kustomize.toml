@@ -1,0 +1,29 @@
+type = "cli"
+
+[platform.macos]
+archive-prefix = "kustomize_v{version}_darwin_{arch}"
+checksum-file = "checksums.txt"
+download-file = "kustomize_v{version}_darwin_{arch}.tar.gz"
+
+[platform.linux]
+archive-prefix = "kustomize_v{version}_linux_{arch}"
+checksum-file = "checksums.txt"
+download-file = "kustomize_v{version}_linux_{arch}.tar.gz"
+
+[platform.windows]
+archive-prefix = "kustomize_v{version}_windows_{arch}"
+checksum-file = "checksums.txt"
+download-file = "kustomize_v{version}_windows_{arch}.zip"
+
+[install]
+unpack = true
+checksum-url = "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv{version}/{checksum_file}"
+download-url = "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/kubernetes-sigs/kustomize"
+git-tag-pattern = "^kustomize/v(([0-9]+)\\.([0-9]+)\\.([0-9]+))"

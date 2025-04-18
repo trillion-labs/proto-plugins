@@ -1,0 +1,28 @@
+name = "ctlptl"
+type = "cli"
+
+[platform.macos]
+archive-prefix = "ctlptl.{version}.mac.{arch}"
+checksum-file = "checksums.txt"
+download-file = "ctlptl.{version}.mac.{arch}.tar.gz"
+
+[platform.linux]
+archive-prefix = "ctlptl.{version}.linux.{arch}"
+checksum-file = "checksums.txt"
+download-file = "ctlptl.{version}.linux.{arch}.tar.gz"
+
+[platform.windows]
+archive-prefix = "ctlptl.{version}.windows.{arch}"
+checksum-file = "checksums.txt"
+download-file = "ctlptl.{version}.windows.{arch}.zip"
+
+[install]
+unpack = true
+checksum-url = "https://github.com/tilt-dev/ctlptl/releases/download/v{version}/{checksum_file}"
+download-url = "https://github.com/tilt-dev/ctlptl/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+
+[resolve]
+git-url = "https://github.com/tilt-dev/ctlptl"

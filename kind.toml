@@ -1,0 +1,28 @@
+name = "kind"
+type = "cli"
+
+[platform.macos]
+archive-prefix = "kind-darwin-{arch}"
+checksum-file = "kind-darwin-{arch}.sha256sum"
+download-file = "kind-darwin-{arch}"
+
+[platform.linux]
+archive-prefix = "kind-linux-{arch}"
+checksum-file = "kind-linux-{arch}.sha256sum"
+download-file = "kind-linux-{arch}"
+
+[platform.windows]
+archive-prefix = "kind-windows-{arch}"
+checksum-file = "kind-windows-{arch}.sha256sum"
+download-file = "kind-windows-{arch}"
+
+[install]
+checksum-url = "https://github.com/kubernetes-sigs/kind/releases/download/v{version}/{checksum_file}"
+download-url = "https://github.com/kubernetes-sigs/kind/releases/download/v{version}/{download_file}"
+
+[install.arch]
+aarch64 = "arm64"
+x86_64 = "amd64"
+
+[resolve]
+git-url = "https://github.com/kubernetes-sigs/kind"
